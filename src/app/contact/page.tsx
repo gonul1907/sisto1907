@@ -31,11 +31,11 @@ export default function Contact() {
 
   return (
     <div className="w-full">
-      <div className="mx-auto max-w-md text-left">
+      <div className="mx-auto max-w-md">
         <h2 className="text-2xl font-bold mb-4">Contact</h2>
         <p className="mb-6">Vul het formulier in of bel ons direct voor een afspraak of vrijblijvende offerte.</p>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-left">
         <div>
           <label className="block text-sm font-medium">Naam</label>
           <input value={name} onChange={e => setName(e.target.value)} className="mt-1 block w-full border rounded px-3 py-2" placeholder="Jouw naam" />

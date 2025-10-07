@@ -5,7 +5,7 @@ export const metadata = {
 export default function Diensten() {
   return (
     <div className="w-full">
-      <div className="mx-auto text-left max-w-5xl">
+      <div className="mx-auto max-w-5xl">
         <h2 className="text-3xl font-bold mb-6">Onze diensten</h2>
         <p className="mb-8">We bieden een breed scala aan vakmanschap voor particuliere en kleinschalige zakelijke opdrachten. Hieronder vind je een overzicht van onze belangrijkste diensten.</p>
 
