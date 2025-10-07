@@ -49,12 +49,38 @@ export default function Navbar() {
       </div>
 
       {/* Mobile panel */}
-      <div className={`sm:hidden transition-max-height overflow-hidden ${open ? 'menu-open' : 'menu-closed'}`}>
-        <nav className="px-4 pt-4 pb-6 flex flex-col gap-3">
-          <Link href="/" className="block px-4 py-3 rounded-full text-center bg-[var(--accent)] text-white flex items-center justify-center gap-2 text-white">Home</Link>
-          <Link href="/diensten" className="block px-4 py-3 rounded-full text-center bg-[var(--accent)] text-white flex items-center justify-center text-white">Diensten</Link>
-          <Link href="/wie-zijn-wij" className="block px-4 py-3 rounded-full text-center bg-[var(--accent)] text-white flex items-center justify-center text-white">Wie zijn wij</Link>
-          <Link href="/contact" className="block px-4 py-3 rounded-full text-center bg-[var(--accent)] text-white flex items-center justify-center text-white">Contact</Link>
+      <div className={`sm:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+        open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+      }`}>
+        <nav className="px-4 pt-4 pb-6 space-y-2">
+          <Link 
+            href="/" 
+            className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-opacity"
+            onClick={() => setOpen(false)}
+          >
+            Home
+          </Link>
+          <Link 
+            href="/diensten" 
+            className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-opacity"
+            onClick={() => setOpen(false)}
+          >
+            Diensten
+          </Link>
+          <Link 
+            href="/wie-zijn-wij" 
+            className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-opacity"
+            onClick={() => setOpen(false)}
+          >
+            Wie zijn wij
+          </Link>
+          <Link 
+            href="/contact" 
+            className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-opacity"
+            onClick={() => setOpen(false)}
+          >
+            Contact
+          </Link>
         </nav>
       </div>
     </header>

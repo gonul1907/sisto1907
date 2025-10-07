@@ -37,10 +37,6 @@ body{
 @layer utilities {
   .bg-beige-100 { background-color: var(--beige-100); }
   .bg-beige-500 { background-color: var(--beige-500); }
-  /* smooth max-height transition for slide-down mobile menu */
-  .transition-max-height { transition: max-height 300ms ease-in-out; }
-  .menu-open { max-height: 480px; }
-  .menu-closed { max-height: 0; }
 }
 
 /* Force white text on navbar links to override browser defaults */
