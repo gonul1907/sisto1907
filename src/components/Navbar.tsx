@@ -44,56 +44,56 @@ function Logo() {
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b-2 border-[var(--accent)] shadow-sm">
-      <div className="max-w-5xl mx-auto px-4 flex items-center justify-between gap-4">
-        <Logo />
+    <header className="sticky top-0 z-50 w-full">
+      <div className="w-full bg-white shadow-lg border-b-2 border-[var(--accent)] px-0 sm:px-0">
+        <div className="max-w-5xl mx-auto px-4 flex items-center justify-between gap-4 py-2">
+          <Logo />
 
-        <nav className="hidden md:flex items-center space-x-8">
-          <Link 
-            href="/" 
-            className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
-          >
-            HOME
-          </Link>
-          
-          <Link 
-            href="/diensten" 
-            className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
-          >
-            DIENSTEN
-          </Link>
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link 
+              href="/" 
+              className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
+            >
+              HOME
+            </Link>
+            <Link 
+              href="/diensten" 
+              className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
+            >
+              DIENSTEN
+            </Link>
+            <Link 
+              href="/wie-zijn-wij" 
+              className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
+            >
+              WIE ZIJN WIJ
+            </Link>
+            <Link 
+              href="/contact" 
+              className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
+            >
+              CONTACT
+            </Link>
+          </nav>
 
-          <Link 
-            href="/wie-zijn-wij" 
-            className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
-          >
-            WIE ZIJN WIJ
-          </Link>
-          
-          <Link 
-            href="/contact" 
-            className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
-          >
-            CONTACT
-          </Link>
-        </nav>
-
-        <div className="sm:hidden">
-          <button
-            aria-expanded={open}
-            aria-label="Toggle menu"
-            onClick={() => setOpen(!open)}
-            className="p-2 rounded bg-[var(--accent)] text-white"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {open ? (
-                <path d="M6 18L18 6M6 6l12 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              ) : (
-                <path d="M3 7h18M3 12h18M3 17h18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              )}
-            </svg>
-          </button>
+          <div className="sm:hidden">
+            <button
+              aria-expanded={open}
+              aria-label="Toggle menu"
+              onClick={() => setOpen(!open)}
+              className="p-2 rounded bg-[var(--accent)] text-white"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {open ? (
+                  <path d="M6 18L18 6M6 6l12 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                ) : (
+                  <path d="M3 7h18M3 12h18M3 17h18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -115,35 +115,35 @@ export default function Navbar() {
               transition={{ duration: 0.2, delay: 0.1 }}
             >
               <nav className="p-4 space-y-3">
-            <Link 
-              href="/" 
-              className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-all duration-200 font-medium"
-              onClick={() => setOpen(false)}
-            >
-              Home
-            </Link>
-            <Link 
-              href="/diensten" 
-              className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-all duration-200 font-medium"
-              onClick={() => setOpen(false)}
-            >
-              Diensten
-            </Link>
-            <Link 
-              href="/wie-zijn-wij" 
-              className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-all duration-200 font-medium"
-              onClick={() => setOpen(false)}
-            >
-              Wie zijn wij
-            </Link>
-            <Link 
-              href="/contact" 
-              className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-all duration-200 font-medium"
-              onClick={() => setOpen(false)}
-            >
-              Contact
-            </Link>
-          </nav>
+                <Link 
+                  href="/" 
+                  className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-all duration-200 font-medium"
+                  onClick={() => setOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link 
+                  href="/diensten" 
+                  className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-all duration-200 font-medium"
+                  onClick={() => setOpen(false)}
+                >
+                  Diensten
+                </Link>
+                <Link 
+                  href="/wie-zijn-wij" 
+                  className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-all duration-200 font-medium"
+                  onClick={() => setOpen(false)}
+                >
+                  Wie zijn wij
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-all duration-200 font-medium"
+                  onClick={() => setOpen(false)}
+                >
+                  Contact
+                </Link>
+              </nav>
             </motion.div>
           </motion.div>
         )}
