@@ -6,8 +6,9 @@
   --beige-50: #f3efe6;
   --beige-100: #e6dfc8;
   --beige-200: #cfc1a0;
-  --beige-500: #b5a47f;
-  --accent: #b59f7a;
+  /* lighter beige for buttons and accents */
+  --beige-500: #d6caa7;
+  --accent: #d6caa7;
   --card-bg: rgba(255,255,255,0.92);
 }
 
