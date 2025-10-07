@@ -21,7 +21,7 @@ function Logo() {
       </svg>
       <div>
         <span className="text-xl font-bold text-[var(--accent)]">SISTO REALISATIE</span>
-        <div className="text-sm text-gray-600">Bouw, verbouw & renovatie</div>
+        <div className="text-sm text-gray-600 bg-white px-2 py-1 rounded shadow-sm">Bouw, verbouw & renovatie</div>
       </div>
     </div>
   )
@@ -31,7 +31,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="w-full bg-white border-b-2 border-[var(--accent)] shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-white border-b-2 border-[var(--accent)] shadow-sm">
       <div className="max-w-5xl mx-auto px-4 flex items-center justify-between gap-4">
         <Logo />
 
