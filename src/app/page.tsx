@@ -18,7 +18,7 @@
 
           <div className="hidden lg:block">
             <div className="w-full h-64 bg-gradient-to-br from-[rgba(181,164,127,0.12)] to-[rgba(181,164,127,0.06)] rounded-lg flex items-center justify-center">
-              <p className="text-sm text-[rgba(0,0,0,0.6)]">Voorbeeldfoto's of project-samples kunnen hier komen.</p>
+              <p className="text-sm text-[rgba(0,0,0,0.6)]">Voorbeeldfoto&apos;s of project-samples kunnen hier komen.</p>
             </div>
           </div>
         </div>
