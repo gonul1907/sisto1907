@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --beige-50: #f3efe6;
+  --beige-100: #e6dfc8;
+  --beige-200: #cfc1a0;
+  --beige-500: #b5a47f;
+}
+
+html,body,#root{
+  height:100%;
+}
+
+body{
+  @apply bg-beige-100 text-neutral-900;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.bg-beige{background-color:var(--beige-200)}
+.card{background-color:var(--beige-50)}
