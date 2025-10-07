@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 
 export const metadata = {
   title: 'Sisto Realisatie',
+  viewport: 'width=device-width, initial-scale=1',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -12,7 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <div className="min-h-screen bg-beige flex flex-col items-center">
           <Navbar />
-          <main className="w-full max-w-3xl px-6 py-12">{children}</main>
+          <main className="w-full max-w-4xl px-4 sm:px-6 lg:px-8 py-8">{children}</main>
         </div>
       </body>
     </html>
