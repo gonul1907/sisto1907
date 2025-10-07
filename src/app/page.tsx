@@ -17,7 +17,7 @@
               <li>• Persoonlijk contact en duidelijke communicatie</li>
             </ul>
 
-            <a href="/diensten" className="inline-block px-8 py-4 rounded bg-[var(--accent)] text-white font-semibold shadow-sm hover:brightness-95">
+            <a href="/diensten" className="inline-block px-8 py-4 rounded bg-white text-[var(--accent)] font-semibold shadow-sm border border-[var(--accent)] hover:bg-[var(--beige-50)] transition-colors">
               Meer over onze diensten
             </a>
           </div>
