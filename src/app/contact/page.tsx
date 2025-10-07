@@ -2,10 +2,6 @@
 
 import { useState } from 'react'
 
-export const metadata = {
-  title: 'Contact - Sisto Realisatie',
-}
-
 export default function Contact() {
   const [name, setName] = useState('')
   const [contact, setContact] = useState('')
