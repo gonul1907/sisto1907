@@ -19,7 +19,10 @@ function Logo() {
           <rect x="18" y="28" width="4" height="7" fill="#B8935A"/>
         </g>
       </svg>
-      <span className="text-lg font-semibold">Sisto Realisatie</span>
+      <div>
+        <span className="text-xl font-bold text-[var(--accent)]">SISTO REALISATIE</span>
+        <div className="text-sm text-gray-600">Bouw, verbouw & renovatie</div>
+      </div>
     </div>
   )
 }
@@ -28,16 +31,39 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="w-full bg-transparent py-4 border-b border-black/[.06]">
+    <header className="w-full bg-white border-b-2 border-[var(--accent)] shadow-sm">
       <div className="max-w-5xl mx-auto px-4 flex items-center justify-between gap-4">
         <Logo />
 
-        <div className="hidden sm:flex items-center gap-3">
-    <Link href="/" className="px-3 py-1 rounded-full bg-[var(--accent)] text-white !text-white hover:opacity-95 flex items-center gap-3 text-sm mx-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.5z" fill="white"/></svg>Home</Link>
-    <Link href="/diensten" className="px-3 py-1 rounded-full bg-[var(--accent)] text-white !text-white hover:opacity-95 flex items-center gap-3 text-sm mx-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Diensten</Link>
-    <Link href="/wie-zijn-wij" className="px-3 py-1 rounded-full bg-[var(--accent)] text-white !text-white hover:opacity-95 flex items-center gap-3 text-sm mx-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3" stroke="white" strokeWidth="1.2"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Wie zijn wij</Link>
-    <Link href="/contact" className="px-3 py-1 rounded-full bg-[var(--accent)] text-white !text-white hover:opacity-95 flex items-center gap-3 text-sm mx-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 8V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v1" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M3 8v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Contact</Link>
-        </div>
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link 
+            href="/" 
+            className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
+          >
+            HOME
+          </Link>
+          
+          <Link 
+            href="/diensten" 
+            className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
+          >
+            DIENSTEN
+          </Link>
+
+          <Link 
+            href="/wie-zijn-wij" 
+            className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
+          >
+            WIE ZIJN WIJ
+          </Link>
+          
+          <Link 
+            href="/contact" 
+            className="text-[var(--accent)] hover:text-[var(--beige-200)] font-semibold text-lg transition-colors"
+          >
+            CONTACT
+          </Link>
+        </nav>
 
         <div className="sm:hidden">
           <button
