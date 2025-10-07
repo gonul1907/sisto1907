@@ -13,8 +13,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <div className="min-h-screen bg-beige flex flex-col items-center">
           <Navbar />
-          {/* wider max width so pages feel less cramped */}
-          <main className="w-full max-w-6xl px-6 sm:px-8 lg:px-12 py-10">{children}</main>
+          {/* wider max width so pages feel less cramped; center text on all pages */}
+          <main className="w-full max-w-6xl px-6 sm:px-8 lg:px-12 py-10 text-center">{children}</main>
         </div>
       </body>
     </html>
