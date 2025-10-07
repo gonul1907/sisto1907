@@ -7,10 +7,16 @@
   --beige-100: #e6dfc8;
   --beige-200: #cfc1a0;
   --beige-500: #b5a47f;
+  --accent: #b59f7a;
+  --card-bg: rgba(255,255,255,0.92);
 }
 
 html,body,#root{
   height:100%;
+}
+
+.body-font {
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
 body{
@@ -20,7 +26,12 @@ body{
 }
 
 .bg-beige{background-color:var(--beige-200)}
-.card{background-color:var(--beige-50)}
+.card{
+  background-color: var(--card-bg);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 10px 30px rgba(27,27,27,0.12);
+  backdrop-filter: blur(6px) saturate(120%);
+}
 
 @layer utilities {
   .bg-beige-100 { background-color: var(--beige-100); }
