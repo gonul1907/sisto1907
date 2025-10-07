@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root{
-  --beige-50: #f3efe6;
-  --beige-100: #e6dfc8;
-  --beige-200: #cfc1a0;
+  --beige-50: #f1f0eb;
+  --beige-100: #d5d1c2;
+  --beige-200: #aba386;
   /* lighter beige for buttons and accents */
-  --beige-500: #d6caa7;
-  --accent: #d6caa7;
-  --card-bg: rgba(255,255,255,0.92);
+  --beige-500: #736635;
+  --accent: #736635;
+  --card-bg: #ffffff;
 }
 
 html,body,#root{
