@@ -25,8 +25,8 @@ export default function Navbar() {
 
         <div className="hidden sm:flex items-center gap-3">
           <Link href="/" className="px-4 py-2 rounded-full bg-[var(--accent)] text-white hover:opacity-95 flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.5z" fill="white"/></svg>Home</Link>
-          <Link href="/diensten" className="px-4 py-2 rounded-full bg-white border border-black/[.06] hover:shadow-sm flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#1f1f1f" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Diensten</Link>
-          <Link href="/wie-zijn-wij" className="px-4 py-2 rounded-full bg-white border border-black/[.06] hover:shadow-sm flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3" stroke="#1f1f1f" strokeWidth="1.2"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#1f1f1f" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Wie zijn wij</Link>
+          <Link href="/diensten" className="px-4 py-2 rounded-full bg-white border border-black/[.06] hover:shadow-sm flex items-center gap-2 text-[var(--beige-500)]"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#1f1f1f" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Diensten</Link>
+          <Link href="/wie-zijn-wij" className="px-4 py-2 rounded-full bg-white border border-black/[.06] hover:shadow-sm flex items-center gap-2 text-[var(--beige-500)]"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3" stroke="#1f1f1f" strokeWidth="1.2"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#1f1f1f" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Wie zijn wij</Link>
           <Link href="/contact" className="px-4 py-2 rounded-full bg-[var(--accent)] text-white hover:opacity-95 flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 8V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v1" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M3 8v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Contact</Link>
         </div>
 
@@ -52,8 +52,8 @@ export default function Navbar() {
       <div className={`sm:hidden transition-max-height overflow-hidden ${open ? 'menu-open' : 'menu-closed'}`}>
         <nav className="px-4 pt-4 pb-6 flex flex-col gap-3">
           <Link href="/" className="block px-4 py-3 rounded-full text-center bg-[var(--accent)] text-white flex items-center justify-center gap-2">Home</Link>
-          <Link href="/diensten" className="block px-4 py-3 rounded-full text-center bg-white border border-black/[.06] flex items-center justify-center">Diensten</Link>
-          <Link href="/wie-zijn-wij" className="block px-4 py-3 rounded-full text-center bg-white border border-black/[.06] flex items-center justify-center">Wie zijn wij</Link>
+          <Link href="/diensten" className="block px-4 py-3 rounded-full text-center bg-white border border-black/[.06] flex items-center justify-center text-[var(--beige-500)]">Diensten</Link>
+          <Link href="/wie-zijn-wij" className="block px-4 py-3 rounded-full text-center bg-white border border-black/[.06] flex items-center justify-center text-[var(--beige-500)]">Wie zijn wij</Link>
           <Link href="/contact" className="block px-4 py-3 rounded-full text-center bg-[var(--accent)] text-white flex items-center justify-center">Contact</Link>
         </nav>
       </div>
