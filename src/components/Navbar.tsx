@@ -2,11 +2,25 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function Logo() {
   return (
-    <div className="flex items-center gap-3">
-      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+    <motion.div 
+      className="flex items-center gap-3"
+      whileHover={{ scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+    >
+      <motion.svg 
+        width="36" 
+        height="36" 
+        viewBox="0 0 100 100" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg" 
+        aria-hidden
+        whileHover={{ rotate: 5 }}
+        transition={{ type: "spring", stiffness: 300, damping: 10 }}
+      >
         {/* Sisto Realisatie logo gebaseerd op de geüploade afbeelding */}
         <g transform="translate(20, 15)">
           {/* Huis vorm met overlappende lijnen */}
@@ -18,12 +32,12 @@ function Logo() {
           <rect x="8" y="28" width="4" height="7" fill="#B8935A"/>
           <rect x="18" y="28" width="4" height="7" fill="#B8935A"/>
         </g>
-      </svg>
+      </motion.svg>
       <div>
         <span className="text-xl font-bold text-[var(--accent)]">SISTO REALISATIE</span>
         <div className="text-sm text-gray-600 bg-white px-2 py-1 rounded shadow-sm">Bouw, verbouw & renovatie</div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -84,11 +98,23 @@ export default function Navbar() {
       </div>
 
       {/* Mobile panel */}
-      <div className={`sm:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-        open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-      }`}>
-        <div className="mx-4 mt-4 mb-2 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-black/5">
-          <nav className="p-4 space-y-3">
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="sm:hidden overflow-hidden"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <motion.div 
+              className="mx-4 mt-4 mb-2 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-black/5"
+              initial={{ y: -10, scale: 0.95 }}
+              animate={{ y: 0, scale: 1 }}
+              exit={{ y: -10, scale: 0.95 }}
+              transition={{ duration: 0.2, delay: 0.1 }}
+            >
+              <nav className="p-4 space-y-3">
             <Link 
               href="/" 
               className="block px-4 py-3 rounded-lg text-center bg-[var(--accent)] text-white hover:opacity-90 transition-all duration-200 font-medium"
@@ -118,8 +144,10 @@ export default function Navbar() {
               Contact
             </Link>
           </nav>
-        </div>
-      </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }

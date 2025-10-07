@@ -1,11 +1,14 @@
+import PageTransition from '../../components/PageTransition'
+
 export const metadata = {
   title: 'Diensten - Sisto Realisatie',
 }
 
 export default function Diensten() {
   return (
-    <main className="w-full min-h-screen flex justify-center py-4">
-      <section className="w-full max-w-2xl bg-white min-h-[85vh] p-8 sm:p-12 mx-4 sm:mx-0 shadow-lg">
+    <PageTransition>
+      <main className="w-full min-h-screen flex justify-center py-4">
+        <section className="w-full max-w-2xl bg-white min-h-[85vh] p-8 sm:p-12 mx-4 sm:mx-0 shadow-lg">
         <div className="text-center space-y-8">
           <div>
             <h2 className="text-3xl font-bold mb-6">Onze diensten</h2>
@@ -62,5 +65,6 @@ export default function Diensten() {
         </div>
       </section>
     </main>
+    </PageTransition>
   )
 }

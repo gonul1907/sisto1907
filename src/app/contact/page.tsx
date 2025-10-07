@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from 'react'
+import PageTransition from '../../components/PageTransition'
+import { LoadingButton } from '../../components/Loading'
 
 export default function Contact() {
   const [name, setName] = useState('')
@@ -30,8 +32,9 @@ export default function Contact() {
   }
 
   return (
-    <main className="w-full min-h-screen flex justify-center py-4">
-      <section className="w-full max-w-2xl bg-white min-h-[85vh] p-8 sm:p-12 mx-4 sm:mx-0 shadow-lg">
+    <PageTransition>
+      <main className="w-full min-h-screen flex justify-center py-4">
+        <section className="w-full max-w-2xl bg-white min-h-[85vh] p-8 sm:p-12 mx-4 sm:mx-0 shadow-lg">
         <div className="text-center space-y-8">
           <div>
             <h2 className="text-3xl font-bold mb-6">Contact</h2>
@@ -73,13 +76,13 @@ export default function Contact() {
             </div>
 
             <div className="text-center pt-4">
-              <button 
+              <LoadingButton 
                 type="submit" 
-                disabled={status === 'sending'} 
+                isLoading={status === 'sending'} 
                 className="px-8 py-4 rounded-lg bg-[var(--accent)] text-white font-semibold hover:brightness-95 transition-all"
               >
-                {status === 'sending' ? 'Verzenden...' : 'Verstuur'}
-              </button>
+                Verstuur
+              </LoadingButton>
             </div>
 
             {status === 'sent' && (
@@ -92,5 +95,6 @@ export default function Contact() {
         </div>
       </section>
     </main>
+    </PageTransition>
   )
 }
