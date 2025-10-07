@@ -38,7 +38,12 @@ export function LoadingPage() {
   )
 }
 
-export function LoadingButton({ children, isLoading, ...props }: any) {
+interface LoadingButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode
+  isLoading?: boolean
+}
+
+export function LoadingButton({ children, isLoading, ...props }: LoadingButtonProps) {
   return (
     <button {...props} disabled={isLoading || props.disabled}>
       <div className="flex items-center justify-center gap-2">
