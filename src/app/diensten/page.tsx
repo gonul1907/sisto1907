@@ -35,7 +35,7 @@ export default function Diensten() {
         </li>
       </ul>
 
-      <p className="mt-8">Wil je een offerte of voorbeelden van afgeronde projecten? <a className="text-beige-500 underline" href="/contact">Neem contact op</a> — we sturen foto's en een heldere prijsopgave.</p>
+          <p className="mt-8">Wil je een offerte of voorbeelden van afgeronde projecten? <a className="text-beige-500 underline" href="/contact">Neem contact op</a> – we sturen foto&apos;s en een heldere prijsopgave.</p>
     </div>
   )
 }
