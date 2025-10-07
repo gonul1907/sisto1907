@@ -30,35 +30,67 @@ export default function Contact() {
   }
 
   return (
-    <div className="w-full">
-      <div className="mx-auto max-w-md">
-        <div className="bg-white/95 backdrop-blur card rounded-lg p-6">
-          <h2 className="text-2xl font-bold mb-4">Contact</h2>
-          <p className="mb-6">Vul het formulier in of bel ons direct voor een afspraak of vrijblijvende offerte.</p>
+    <main className="w-full min-h-screen flex justify-center py-4">
+      <section className="w-full max-w-2xl bg-white min-h-[85vh] p-8 sm:p-12 mx-4 sm:mx-0 shadow-lg">
+        <div className="text-center space-y-8">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Contact</h2>
+            <p className="mb-8 text-base sm:text-lg leading-relaxed">
+              Vul het formulier in of bel ons direct voor een afspraak of vrijblijvende offerte.
+            </p>
+          </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4 text-left">
-        <div>
-          <label className="block text-sm font-medium">Naam</label>
-          <input value={name} onChange={e => setName(e.target.value)} className="mt-1 block w-full border rounded px-3 py-2" placeholder="Jouw naam" />
-        </div>
+          <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto text-left">
+            <div>
+              <label className="block text-sm font-medium mb-2">Naam</label>
+              <input 
+                value={name} 
+                onChange={e => setName(e.target.value)} 
+                className="w-full border border-[var(--beige-200)] rounded-lg px-4 py-3 focus:border-[var(--accent)] focus:outline-none" 
+                placeholder="Jouw naam" 
+              />
+            </div>
 
-        <div>
-          <label className="block text-sm font-medium">E-mail of telefoon</label>
-          <input value={contact} onChange={e => setContact(e.target.value)} className="mt-1 block w-full border rounded px-3 py-2" placeholder="E-mail of telefoon" />
-        </div>
+            <div>
+              <label className="block text-sm font-medium mb-2">E-mail of telefoon</label>
+              <input 
+                value={contact} 
+                onChange={e => setContact(e.target.value)} 
+                className="w-full border border-[var(--beige-200)] rounded-lg px-4 py-3 focus:border-[var(--accent)] focus:outline-none" 
+                placeholder="E-mail of telefoon" 
+              />
+            </div>
 
-        <div>
-          <label className="block text-sm font-medium">Bericht</label>
-          <textarea value={message} onChange={e => setMessage(e.target.value)} className="mt-1 block w-full border rounded px-3 py-2" rows={4} placeholder="Wat kunnen we voor je doen?"></textarea>
-        </div>
+            <div>
+              <label className="block text-sm font-medium mb-2">Bericht</label>
+              <textarea 
+                value={message} 
+                onChange={e => setMessage(e.target.value)} 
+                className="w-full border border-[var(--beige-200)] rounded-lg px-4 py-3 focus:border-[var(--accent)] focus:outline-none" 
+                rows={5} 
+                placeholder="Wat kunnen we voor je doen?"
+              ></textarea>
+            </div>
 
-        <button type="submit" disabled={status === 'sending'} className="inline-block px-4 py-2 rounded bg-beige-500 text-white">{status === 'sending' ? 'Verzenden...' : 'Verstuur'}</button>
+            <div className="text-center pt-4">
+              <button 
+                type="submit" 
+                disabled={status === 'sending'} 
+                className="px-8 py-4 rounded-lg bg-[var(--accent)] text-white font-semibold hover:brightness-95 transition-all"
+              >
+                {status === 'sending' ? 'Verzenden...' : 'Verstuur'}
+              </button>
+            </div>
 
-        {status === 'sent' && <p className="text-green-600">Bedankt, je bericht is verzonden.</p>}
-        {status === 'error' && <p className="text-red-600">Er ging iets mis, probeer het later opnieuw.</p>}
+            {status === 'sent' && (
+              <p className="text-green-600 text-center">Bedankt, je bericht is verzonden.</p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-600 text-center">Er ging iets mis, probeer het later opnieuw.</p>
+            )}
           </form>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }
