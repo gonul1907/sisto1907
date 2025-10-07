@@ -6,9 +6,18 @@ import Link from 'next/link'
 function Logo() {
   return (
     <div className="flex items-center gap-3">
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-        <rect x="2" y="2" width="20" height="20" rx="4" fill="#b59f7a" />
-        <path d="M6 15L10 9L14 15" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        {/* Sisto Realisatie logo gebaseerd op de geüploade afbeelding */}
+        <g transform="translate(20, 15)">
+          {/* Huis vorm met overlappende lijnen */}
+          <path d="M30 10 L45 25 L45 35 L40 35 L40 30 L35 30 L35 35 L30 35 L30 25 L15 25 L15 35 L10 35 L10 30 L5 30 L5 35 L0 35 L0 25 L15 10 L30 10 Z" fill="#D4A574" stroke="#B8935A" strokeWidth="1"/>
+          <path d="M15 10 L30 25 L30 35 L25 35 L25 30 L20 30 L20 35 L15 35 L15 25 L0 25 L0 35" fill="none" stroke="#B8935A" strokeWidth="1.5"/>
+          <path d="M0 25 L15 10 L30 25" fill="none" stroke="#B8935A" strokeWidth="2"/>
+          
+          {/* Extra architecturale lijnen */}
+          <rect x="8" y="28" width="4" height="7" fill="#B8935A"/>
+          <rect x="18" y="28" width="4" height="7" fill="#B8935A"/>
+        </g>
       </svg>
       <span className="text-lg font-semibold">Sisto Realisatie</span>
     </div>
