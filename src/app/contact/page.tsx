@@ -31,10 +31,11 @@ export default function Contact() {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold mb-4">Contact</h2>
-      <p className="mb-6">Vul het formulier in of bel ons direct voor een afspraak of vrijblijvende offerte.</p>
+      <div className="mx-auto max-w-md text-left">
+        <h2 className="text-2xl font-bold mb-4">Contact</h2>
+        <p className="mb-6">Vul het formulier in of bel ons direct voor een afspraak of vrijblijvende offerte.</p>
 
-      <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
+        <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Naam</label>
           <input value={name} onChange={e => setName(e.target.value)} className="mt-1 block w-full border rounded px-3 py-2" placeholder="Jouw naam" />
@@ -54,7 +55,8 @@ export default function Contact() {
 
         {status === 'sent' && <p className="text-green-600">Bedankt, je bericht is verzonden.</p>}
         {status === 'error' && <p className="text-red-600">Er ging iets mis, probeer het later opnieuw.</p>}
-      </form>
+        </form>
+      </div>
     </div>
   )
 }
